@@ -15,11 +15,18 @@ var app7 = new Vue({
 });
 
 var data = {
-    a: 1
+    message: 'Hello'
 };
 
 var vm = new Vue({
     el: '#example',
-    data: data
+    data: data,
+    computed: {
+        reversedMessage: function () {
+            return this.message.split('').reverse().join('')
+        }
+    }
 });
+
+
 
