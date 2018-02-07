@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--<script src="https://cdn.jsdelivr.net/npm/vue/"></script>-->
+    <script src="vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        {{message}}
+    </div>
+
+    <div id="app-2">
+        <span v-bind:title="message">
+            鼠标悬停此处几秒，可以看到此处动态绑定的title!
+        </span>
+    </div>
+
+    <div id="app-3">
+        <span v-if="seen">
+            现在你可以看到我
+        </span>
+    </div>
+
+    <div id="app-4">
+        <ol>
+            <li v-for="todo in todos">
+                {{ todo.text }}
+            </li>
+        </ol>
+    </div>
+
+    <div id="app-5">
+        <p>{{ message }}</p>
+        <button v-on:click="reverseMessage">翻转 message</button>
+    </div>
+
+    <div id="app-6">
+        <p>{{ message }}</p>
+        <input type="text" v-model="message">
+    </div>
+
+
+
+    <script src="first.js"></script>
+</body>
+</html>
