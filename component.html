@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script src="vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>
 </head>
 <body>
     <div id="app-7">
@@ -19,8 +21,25 @@
 
     <div id="example">
         <p>初始message是："{{ message }}"</p>
-        <p>计算后的翻转 message 是："{{ reversedMessage }}"</p>
+        <p>计算后的翻转 message 是："{{ reverseMessage() }}"</p>
     </div>
+
+    <div id="demo">
+        <p>{{ fullName }}</p>
+        <p>{{ firstName }}</p>
+        <p>{{ lastName }}</p>
+    </div>
+
+    <div id="watch-example">
+        <p>
+            问一个答案是 yes/no 的问题：
+            <input type="text" v-model="question">
+        </p>
+        <p>
+            {{ answer }}
+        </p>
+    </div>
+
 
     <script src="index2.js"></script>
 
