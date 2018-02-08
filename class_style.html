@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+    <!--<div v-bind:class="{'active': isActive, 'text-danger': hasError}" id="bindA"></div>-->
+    <div v-bind:class="[activeClass, errorClass]" id="bindA"></div>
+    <div id="bindB" v-bind:style='{ color: activeColor, fontSize: fontSize+"px", width: "100px", height: "100px"}'>
+        <p>第三节课发代收货款</p>
+    </div>
+
+    <ul id="example-1">
+        <li v-for="item in items">
+            {{ item.message }}
+        </li>
+    </ul>
+
+    <ul id="v-for-object">
+        <li v-for="(value, key) in object">
+            {{ key }}--{{ value }}
+        </li>
+    </ul>
+
+    <script src="class_style.js"></script>
+</body>
+</html>
